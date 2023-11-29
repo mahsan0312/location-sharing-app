@@ -113,3 +113,13 @@
           name = formData.split('=')[1]
           data = getLocation(name)
           return
+
+      # run this code if we're on the trips page
+      if location.pathname.startsWith('/trips')
+        showLat = $('#lat').val() # get the user's latitude from the hidden field
+        showLng = $('#lng').val() # get the user's longitude from the hidden field
+        data =
+          lat: Number(showLat),
+          lng: Number(showLng)
+        startingPoint = data
+        initMap()
