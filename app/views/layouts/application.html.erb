@@ -4,10 +4,11 @@
     <title>PusherLocations</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> # add Google Maps script
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <script src="https://js.pusher.com/4.1/pusher.min.js"></script> # add Pusher script
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
